@@ -1,7 +1,12 @@
 monedas = 100
 buenas_acciones = 100
 
-def espada_2():
+def asking_username():
+    print(" Dime tu nombre... ")
+    username = input()
+    return username
+
+def sword_2():
     print("")
     print('     /')
     print('O===[====================>')
@@ -10,9 +15,9 @@ def espada_2():
 print("")
 print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
 print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,    Había una vez un caballero medieval genérico, que como todo caballero medieval genérico debía rescatar     ,ø¤º°`°º¤ø,\n"
-      "°º¤ø,¸¸,             a la princesa que estaba encerrada en la cima de una torre custodiada por varios dragones.        ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
+print("°º¤ø,¸¸,                               Había una vez un caballero medieval llamado", asking_username()+"                              ,ø¤º°`°º¤ø,")
+print("°º¤ø,¸¸,                                que como todo caballero medieval genérico debía rescatar                       ,ø¤º°`°º¤ø,")
+print("°º¤ø,¸¸,             a la princesa que estaba encerrada en la cima de una torre custodiada por varios dragones.        ,ø¤º°`°º¤ø,")
 print("°º¤ø,¸¸,  Antes de partir a su misión el rey le dió una espada, un ungüento mágico que puede curar cualquier herida    ,ø¤º°`°º¤ø,\n"
       "°º¤ø,¸¸,                                         y 100 monedas para su viaje.                                          ,ø¤º°`°º¤ø,")
 print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
@@ -37,7 +42,7 @@ if pregunta_espada == ("si"):
         monedas = monedas - 50
         print("Cantidad de monedas:", monedas)
         print("Y una espada nueva")
-        espada_2()
+        sword_2()
 
 elif pregunta_espada == ("no"):
         monedas = monedas - 25
