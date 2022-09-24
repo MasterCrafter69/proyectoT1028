@@ -1,20 +1,59 @@
 monedas = 100
 buenas_acciones = 100
+name = "a"
 
 def marco_arriba():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°¤ø,¸¸,ø¤º°`°º")
-    print("°º¤ø,¸¸,                                                                                           ,ø¤º°`°º")
+    print("")
+    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø"
+          ",¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,                                                                                                    "
+          "           ,ø¤º°`°º¤ø,")
+
+
+def marco_mitad():
+    print("°º¤ø,¸¸,                                                                                                    "
+          "           ,ø¤º°`°º¤ø,")
 
 
 def marco_abajo():
-    print("°º¤ø,¸¸,                                                                                           ,ø¤º°`°º")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°¤ø,¸¸,ø¤º°`°º")
+    print("°º¤ø,¸¸,                                                                                                    "
+          "           ,ø¤º°`°º¤ø,")
+    print(
+        "°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,"
+        "¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,\n")
+
+
+def marco_fin():
+    marco_mitad()
+    print("°º¤ø,¸¸,                                                 Fin del juego.                                     "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
 
 
 def asking_username():
     global name
-    name = str(input("enter the name : "))
+    name = str(input("Inserta tu nombre : "))
     return name
+
+
+def inicio():
+    asking_username()
+    marco_arriba()
+    print("°º¤ø,¸¸,                               Había una vez un caballero medieval llamado " + str(name) +
+          "                    ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,                                que como todo caballero medieval genérico debía rescatar            "
+          "           ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,             a la princesa que estaba encerrada en la cima de una torre custodiada por varios dragon"
+          "es.        ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,  Antes de partir a su misión el rey le dió una espada, un ungüento mágico que puede curar cualquier"
+          " herida    ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,                                         y 100 monedas para su viaje.                               "
+          "           ,ø¤º°`°º¤ø,")
+    marco_mitad()
+    print("°º¤ø,¸¸,                                Así que el caballero salió a su aventura...                         "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
+
 
 def sword_2():
     print("")
@@ -22,15 +61,17 @@ def sword_2():
     print('O===[====================>')
     print('     I   \n')
 
+
 def entra_al_bosque():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,  Cuando el caballero entro al bosque se encontró con un vendedor que le ofrecia una espada mas grande         ,ø¤º°`°º¤ø,\n"
-        "°º¤ø,¸¸,                                         por el precio de 50 monedas...                                        ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,\n")
+    marco_arriba()
+    print("°º¤ø,¸¸,  Cuando el caballero entro al bosque se encontró con un vendedor que le ofrecia una espada mas gran"
+          "de         ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,                                         por el precio de 50 monedas...                             "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
     resp = input("¿continuar? si/no\n")
     return resp
+
 
 def si_acepte_la_oferta():
     global monedas
@@ -39,116 +80,92 @@ def si_acepte_la_oferta():
     print("Y una espada nueva")
     sword_2()
 
+
 def no_acepte_la_oferta():
     global monedas
     monedas = monedas - 25
     print("El vendedor de todos modos quiere dinero, logra arrebatarte unas cuantas monedas y se va corriendo")
-    print("Cantidad de monedas:", monedas)
+    print("Cantidad de monedas: ", monedas)
+    print("")
+
 
 def torre():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                Llega a la torre y la puerta esta cerrada                                      ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,                                Llega a la torre y la puerta esta cerrada                           "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
     resp = input("¿continuar? si/no\n")
     return resp
 
+
 def tocas_la_puerta():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                   Tocas la puerta y no hay respuesta , mueres esperando a que alguien abra la puerta.         ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                 Fin del juego.                                                ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,                   Tocas la puerta y no hay respuesta , mueres esperando a que alguien abra la puert"
+          "a.         ,ø¤º°`°º¤ø,")
+    marco_fin()
     exit()
 
 
 def si_derribar_puerta():
-    if pregunta_derribar ==("si"):
-        print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-        print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-        print("°º¤ø,¸¸,                                Derribaste la puerta y entraste al castillo                                    ,ø¤º°`°º¤ø,")
-        print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-        print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-        resp = input("¿continuar? si/no\n")
-        return resp
+    marco_arriba()
+    print("°º¤ø,¸¸,                            Derribaste la puerta y entraste al castillo                             "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
+    resp = input("¿continuar? si/no\n")
+    return resp
+
 
 def no_derribar_puerta():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,   Regresas al palacio por un abridor de puertas, otro día regresaras al castillo pero hoy fallaste.           ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                 Fin del juego.                                                ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,   Regresas al palacio por un abridor de puertas, otro día regresaras al castillo pero hoy fallaste."
+          "           ,ø¤º°`°º¤ø,")
+    marco_fin()
     exit()
 
+
 def dragon():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                    Entras al castillo y encuentras al dragón...                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,\n")
+    marco_arriba()
+    print("°º¤ø,¸¸,                                    Entras al castillo y encuentras al dragón...                    "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
 
 
 def atacar():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                           El dragón te pega y te mueres                                       ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                 Fin del juego.                                                ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,                                           El dragón te pega y te mueres                            "
+          "           ,ø¤º°`°º¤ø,")
+    marco_fin()
     exit()
 
 
 def amigos():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                El dragón te pregunta si quieres ser su amigo                                  ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,                                El dragón te pregunta si quieres ser su amigo                       "
+          "           ,ø¤º°`°º¤ø,")
+    marco_abajo()
+
 
 def si_amigo():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,      El dragón se hace tu amigo y te ayuda a rescatar a la princesa, regresas al palacio como un héroe,       ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                        un nuevo amigo y el amor tu vida.                                      ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                 Fin del juego.                                                ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,      El dragón se hace tu amigo y te ayuda a rescatar a la princesa, regresas al palacio como un hé"
+          "roe,       ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,                                        un nuevo amigo y el amor tu vida.                           "
+          "           ,ø¤º°`°º¤ø,")
+    marco_fin()
     exit()
 
 
 def no_amigo():
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                         El dragón se poner triste por tu respuesta que empieza a llorar                       ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                        inunda el castillo y mueres ahogado.                                   ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                 Fin del juego.                                                ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
+    marco_arriba()
+    print("°º¤ø,¸¸,                         El dragón se poner triste por tu respuesta que empieza a llorar            "
+          "          ,ø¤º°`°º¤ø,")
+    print("°º¤ø,¸¸,                                        inunda el castillo y mueres ahogado.                        "
+          "          ,ø¤º°`°º¤ø,")
+    marco_fin()
     exit()
 
 
-asking_username()
-print("")
-print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                               Había una vez un caballero medieval llamado " + str(name) +"                    ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                                que como todo caballero medieval genérico debía rescatar                       ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,             a la princesa que estaba encerrada en la cima de una torre custodiada por varios dragones.        ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,  Antes de partir a su misión el rey le dió una espada, un ungüento mágico que puede curar cualquier herida    ,ø¤º°`°º¤ø,\n"
-      "°º¤ø,¸¸,                                         y 100 monedas para su viaje.                                          ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                                Así que el caballero salió a su aventura...                                    ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,                                                                                                               ,ø¤º°`°º¤ø,")
-print("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,\n")
-
+inicio()
 respuesta = input("¿Quieres entrar al bosque? si/no\n")
 while respuesta == 'si':
     respuesta = entra_al_bosque()
@@ -183,6 +200,7 @@ while respuesta == 'si':
             elif pregunta_amigo == ("no"):
                 no_amigo()
 
-print('Fin del juego')
+marco_arriba()
+marco_fin()
 exit()
 
