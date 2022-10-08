@@ -10,22 +10,28 @@ personaje = ["princesa", "vendedor", "dragón"]
 
 escenario = ["bosque", "castillo", "palacio"]
 
-
-def marco_arriba():
-    print(lista[0])
-    print(lista[1])
+castillo = [['|torre|', '*** muro ***', '|torre|'], ['*** muro ***', '[habitación_princesa]', '*** muro ***'],
+            ['|torre|', '{entrada_pricipal}', '|torre|']]
 
 
-def marco_abajo():
-    print(lista[1])
-    print(lista[0])
+def mapa_castillo():
+    print('   ' + castillo[0][0] + ' ' + castillo[0][1] + ' ' + castillo[0][2])
+    print(castillo[1][0] + ' ' + castillo[1][1] + ' ' + castillo[1][2])
+    print('   ' + castillo[2][0] + ' ' + castillo[2][1] + ' ' + castillo[2][2])
 
 
-def marco_fin():
-    print(lista[1])
-    print("°º¤ø,¸¸,                                                 Fin del juego.                                     "
-          "           ,ø¤º°`°º¤ø,")
-    marco_abajo()
+def marco(position):
+    if position == 'arriba':
+        print(lista[0])
+        print(lista[1])
+    elif position == 'abajo':
+        print(lista[1])
+        print(lista[0])
+    elif position == 'fin':
+        print(lista[1])
+        print("°º¤ø,¸¸,                                                 Fin del juego.                                 "
+              "               ,ø¤º°`°º¤ø,")
+        marco('abajo')
 
 
 def asking_username():
@@ -36,12 +42,12 @@ def asking_username():
 
 def inicio():
     asking_username()
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                               Había una vez un caballero medieval llamado " + str(name) +
           "                              ,ø¤º°`°º¤ø,")
     print("°º¤ø,¸¸,                                que como todo caballero medieval genérico debía rescatar            "
           "           ,ø¤º°`°º¤ø,")
-    print("°º¤ø,¸¸,             a la ", personaje[0], " que estaba encerrada en la cima de una torre custodiada por va "
+    print("°º¤ø,¸¸,             a la ", personaje[0], " que estaba encerrada en la cima de una torre custodiada por va"
           "rios dragones.      ,ø¤º°`°º¤ø,")
     print("°º¤ø,¸¸,  Antes de partir a su misión el rey le dió una espada, un ungüento mágico que puede curar cualquier"
           "herida     ,ø¤º°`°º¤ø,")
@@ -50,7 +56,7 @@ def inicio():
     print(lista[1])
     print("°º¤ø,¸¸,                                Así que el caballero salió a su aventura...                         "
           "           ,ø¤º°`°º¤ø,")
-    marco_abajo()
+    marco('abajo')
 
 
 def sword_2():
@@ -61,12 +67,12 @@ def sword_2():
 
 
 def entra_al_bosque():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,  Cuando el caballero entro al", escenario[0], " se encontró con un", personaje[1], "que le ofrecia "
           " una espada mas grande       ,ø¤º°`°º¤ø,")
     print("°º¤ø,¸¸,                                         por el precio de 50 monedas...                             "
           "           ,ø¤º°`°º¤ø,")
-    marco_abajo()
+    marco('abajo')
     resp = input("¿continuar? si/no\n")
     return resp
 
@@ -88,78 +94,78 @@ def no_acepte_la_oferta():
 
 
 def torre():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                                Llega al", escenario[1], "y la puerta esta cerrada                  "
           "                   ,ø¤º°`°º¤ø,")
-    marco_abajo()
+    marco('abajo')
     resp = input("¿continuar? si/no\n")
     return resp
 
 
 def tocas_la_puerta():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                 Tocas la puerta y no hay respuesta , mueres esperando a que alguien abra la puerta."
           "         ,ø¤º°`°º¤ø,")
-    marco_fin()
+    marco('fin')
     exit()
 
 
 def si_derribar_puerta():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                            Derribaste la puerta y entraste al", escenario[1], "                    "
           "                   ,ø¤º°`°º¤ø,")
-    marco_abajo()
+    marco('abajo')
     resp = input("¿continuar? si/no\n")
     return resp
 
 
 def no_derribar_puerta():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,   Regresas al", escenario[2], " por un abridor de puertas, otro día regresaras al", escenario[1], ""
           " pero hoy fallaste.           ,ø¤º°`°º¤ø,")
-    marco_fin()
+    marco('fin')
     exit()
 
 
 def dragon():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                                    Entras al", escenario[1], " y encuentras al", personaje[2], "   "
           "                             ,ø¤º°`°º¤ø,")
-    marco_abajo()
+    marco('abajo')
 
 
 def atacar():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                                           El", personaje[2], "te pega y te mueres                  "
           "                     ,ø¤º°`°º¤ø,")
-    marco_fin()
+    marco('fin')
     exit()
 
 
 def amigos():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                                      El", personaje[2], "te pregunta si quieres ser su amigo       "
           "                     ,ø¤º°`°º¤ø,")
-    marco_abajo()
+    marco('abajo')
 
 
 def si_amigo():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,      El", personaje[2], "se hace tu amigo y te ayuda a rescatar a la ", personaje[0], " regresas al"
           " ", escenario[2], " como un héroe,    ,ø¤º°`°º¤ø,")
     print("°º¤ø,¸¸,                                        un nuevo amigo y el amor tu vida.                           "
           "           ,ø¤º°`°º¤ø,")
-    marco_fin()
+    marco('fin')
     exit()
 
 
 def no_amigo():
-    marco_arriba()
+    marco('arriba')
     print("°º¤ø,¸¸,                        El ", personaje[2], " se poner triste por tu respuesta que empieza a llorar "
           "          ,ø¤º°`°º¤ø,")
     print("°º¤ø,¸¸,                                        inunda el", escenario[1], " y mueres ahogado.               "
           "          ,ø¤º°`°º¤ø,")
-    marco_fin()
+    marco('fin')
     exit()
 
 
@@ -175,6 +181,7 @@ while respuesta == 'si':
     elif pregunta_espada == "no":
         no_acepte_la_oferta()
     respuesta = torre()
+
     if respuesta == "no":
         break
     pregunta_puerta = input("¿Tocar la puerta? si/no")
@@ -188,6 +195,9 @@ while respuesta == 'si':
                 break
         elif pregunta_derribar == "no":
             no_derribar_puerta()
+        respuesta_mapa = input('¿ver mapa?')
+        if respuesta == 'si':
+            mapa_castillo()
         dragon()
         pregunta_atacar = input("¿Atacar al dragón? si/no \n")
         if pregunta_atacar == "si":
@@ -200,6 +210,6 @@ while respuesta == 'si':
             elif pregunta_amigo == "no":
                 no_amigo()
 
-marco_arriba()
-marco_fin()
+marco('arriba')
+marco('fin')
 exit()
