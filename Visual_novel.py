@@ -70,17 +70,20 @@ def vendedor(pregunta_vendedor, monedas):
 
     if pregunta_vendedor == 'si':
         monedas = monedas - 50
+        marco('arriba')
         print("Cantidad de monedas: ", monedas)
         print("Y una espada nueva")
         sword_2()
+        marco('abajo')
         return monedas
 
     elif pregunta_vendedor == 'no':
         monedas = monedas - 5
+        marco('arriba')
         print("El", personaje[1], " de todos modos quiere dinero, logra arrebatarte unas cuantas monedas y se va "
                                   "corriendo")
         print("Cantidad de monedas: ", monedas)
-        print("")
+        marco('abajo')
         return monedas
 
 
@@ -95,14 +98,13 @@ def torre(puerta):
         marco('arriba')
         print(
             "°º¤ø,¸¸,                 Tocas la puerta y no hay respuesta , mueres esperando a que alguien abra la "
-            "puerta."
-            "         ,ø¤º°`°º¤ø,")
+            "puerta.         ,ø¤º°`°º¤ø,")
         marco('fin')
+
     elif puerta == 'derribar_la_puerta':
         marco('arriba')
         print("°º¤ø,¸¸,                            Derribaste la puerta y entraste al", escenario[1],
-              "                    "
-              "                   ,ø¤º°`°º¤ø,")
+              "                                       ,ø¤º°`°º¤ø,")
         marco('abajo')
 
     elif puerta == 'no_derribar':
@@ -117,6 +119,7 @@ def mapa_castillo():
     print('   ' + castillo[0][0] + ' ' + castillo[0][1] + ' ' + castillo[0][2])
     print(castillo[1][0] + ' ' + castillo[1][1] + ' ' + castillo[1][2])
     print('   ' + castillo[2][0] + ' ' + castillo[2][1] + ' ' + castillo[2][2])
+    print('')
 
 
 def dragon(encontrar):
@@ -157,10 +160,9 @@ def dragon(encontrar):
         marco('fin')
 
 
-print('Responde a las preguntas utilizando si o no')
+print('\nResponde a las preguntas utilizando si o no\n')
 respuesta = input('¿Quieres jugar?\n')
 while respuesta != 'no':
-    print('')
     inicio('')
     monedas = vendedor('entra_al_bosque', 100)
     pregunta_espada = input('¿Quieres comprar la espada?\n')
@@ -175,24 +177,24 @@ while respuesta != 'no':
         respuesta = input('¿Volver a intentar?\n')
     elif pregunta_puerta == 'no':
         pregunta_derribar = input('¿Derribar la puerta?\n')
-        if pregunta_derribar == 'si':
-            torre('derribar_puerta')
-        elif pregunta_derribar == 'no':
+        if pregunta_derribar == 'no':
             torre('no_derribar')
             respuesta = input('¿Volver a intentar?\n')
-        respuesta_mapa = input('¿ver mapa?\n')
-        if respuesta_mapa == 'si':
-            mapa_castillo()
-        dragon('encontrar_dragon')
-        respuesta_atacar = input('¿Atacar?\n')
-        if respuesta_atacar == 'si':
-            dragon('atacar')
-            respuesta = input('¿Volver a intentar?\n')
-        elif respuesta_atacar == 'no':
-            dragon('amigos')
-            respuesta_amigos = input('¿Quieres ser su amigo?\n')
-            if respuesta_amigos == 'si':
-                dragon('si_amigos')
-            elif respuesta_amigos == 'no':
-                dragon('no_amigos')
+        elif pregunta_derribar == 'si':
+            torre('derribar_puerta')
+            respuesta_mapa = input('¿ver mapa?\n')
+            if respuesta_mapa == 'si':
+                mapa_castillo()
+            dragon('encontrar_dragon')
+            respuesta_atacar = input('¿Atacar?\n')
+            if respuesta_atacar == 'si':
+                dragon('atacar')
                 respuesta = input('¿Volver a intentar?\n')
+            elif respuesta_atacar == 'no':
+                dragon('amigos')
+                respuesta_amigos = input('¿Quieres ser su amigo?\n')
+                if respuesta_amigos == 'si':
+                    dragon('si_amigos')
+                elif respuesta_amigos == 'no':
+                    dragon('no_amigos')
+                    respuesta = input('¿Volver a intentar?\n')
