@@ -75,7 +75,6 @@ def vendedor(pregunta_vendedor, monedas):
         print("Y una espada nueva")
         sword_2()
         marco('abajo')
-        return monedas
 
     elif pregunta_vendedor == 'no':
         monedas = monedas - 5
@@ -84,8 +83,8 @@ def vendedor(pregunta_vendedor, monedas):
                                   "corriendo")
         print("Cantidad de monedas: ", monedas)
         marco('abajo')
-        return monedas
 
+    return monedas
 
 def torre(puerta):
     if puerta == 'puerta_cerrada':
@@ -161,15 +160,16 @@ def dragon(encontrar):
 
 
 print('\nResponde a las preguntas utilizando si o no\n')
+monedas = 100
 respuesta = input('¿Quieres jugar?\n')
 while respuesta != 'no':
     inicio('')
-    monedas = vendedor('entra_al_bosque', 100)
+    monedas = vendedor('entra_al_bosque', monedas)
     pregunta_espada = input('¿Quieres comprar la espada?\n')
     if pregunta_espada == 'si':
-        monedas = vendedor('si', 100)
+        monedas = vendedor('si', monedas)
     elif pregunta_espada == 'no':
-        monedas = vendedor('no', 100)
+        monedas = vendedor('no', monedas)
     torre('puerta_cerrada')
     pregunta_puerta = input('¿Quieres tocar la puerta?\n')
     if pregunta_puerta == 'si':
