@@ -1,0 +1,24 @@
+Sub-Competencia: Uso de funciones (Avance 3)
+
+Erro original: el uso de la función no es útil, no hay paso de parámetros, ni modularidad, ni reutilización. El 98% del código estaba amontonado en el main y solo tenia una función que solo imprimía texto.
+
+Cambio realizado: Cree las siguientes funciones que se usan en el programa principal y mejoran el manejo de la historia.
+
+	def marco(position):
+
+	def asking_username(name):
+
+	def sword_2():
+
+	def vendedor(pregunta_vendedor, monedas):
+
+	def torre(puerta):
+
+	def mapa_castillo():
+
+	def dragon(encontrar):
+
+Ahora mis funciones cumplen con el paso de parámetros, modularidad y reutilización
+
+Líneas de código dónde se ve la corrección: Todo el código, por que mucho código lo reescribí y lo ordene en sus respectivas funciones.
+
