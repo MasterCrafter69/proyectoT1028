@@ -1,3 +1,9 @@
+"""
+ Proyecto TC1028
+ Daniel Aguilar Darío
+ A01710975@tec.mx
+ El proyecto consiste en una novela visual, espero que lo disfrutes.
+"""
 lista = ["°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,¸°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø"
          ",¸¸,°º¤ø,¸¸,ø¤º°`°º¤ø,", "°º¤ø,¸¸,                                                                          "
          "                                     ,ø¤º°`°º¤ø,"]
@@ -9,8 +15,16 @@ personaje = ["princesa", "vendedor", "dragón"]
 
 escenario = ["bosque", "castillo", "palacio"]
 
+"""
+=============================================== funciones de preguntas  ================================================
+"""
+
 
 def marco(position):
+    """
+    La función marco recibe el parametro position el cual se utiliza para indicar que tipo de marco se requiere, ya sea
+    uno superior o uno inferior, también se utiliza para poner el marco final.
+    """
     if position == 'arriba':
         print(lista[0])
         print(lista[1])
@@ -27,13 +41,17 @@ def marco(position):
 
 def asking_username(name):
     len(name)
-    name = str(input("Inserta tu nombre : \n"))
+    name = str(input("\nInserta tu nombre : \n"))
     if name == '':
         name = 'Caballero Generico'
     return name
 
 
 def inicio(name):
+    """
+    La función inicio recibe un parametro nombre el cual es el nombre del jugador y se utiliza para integrarlo como
+    parte de la historia.
+    """
     name = asking_username(name)
     marco('arriba')
     print("°º¤ø,¸¸,                               Había una vez un caballero medieval llamado " + str(name) +
@@ -53,6 +71,9 @@ def inicio(name):
 
 
 def sword_2():
+    """
+    La función sword_2 se encarga de ilustrar una espada hecha con caracteres.
+    """
     print("")
     print('     I')
     print('O===[====================>')
@@ -60,6 +81,11 @@ def sword_2():
 
 
 def vendedor(pregunta_vendedor, monedas):
+    """
+    La función vendedor recibe dos parametros, preguntar_vendedor y monedas, el primer parametro recibe el valor de
+    la desición de de la pregunta al vendedor con lo cual se ejecutará la acción correspondiente, para el caso del
+    parametro moneda se traslada el valor del total de las monedas en poseción del vendedor.
+    """
     if pregunta_vendedor == 'entra_al_bosque':
         marco('arriba')
         print("°º¤ø,¸¸,  Cuando el caballero entro al", escenario[0], "se encontró con un", personaje[1],
@@ -86,7 +112,12 @@ def vendedor(pregunta_vendedor, monedas):
 
     return monedas
 
+
 def torre(puerta):
+    """
+    La función torre recibe el parametro de puerta el cual lleva el valor de la respuesta del jugador y mediante esta
+    respuesta se ejecutará la acción del jugador.
+    """
     if puerta == 'puerta_cerrada':
         marco('arriba')
         print("°º¤ø,¸¸,                                Llega al", escenario[1], "y la puerta esta cerrada              "
@@ -115,6 +146,9 @@ def torre(puerta):
 
 
 def mapa_castillo():
+    """
+    La función de mapa_castillo se encarga de imprimir el mapa del castillo.
+    """
     print('   ' + castillo[0][0] + ' ' + castillo[0][1] + ' ' + castillo[0][2])
     print(castillo[1][0] + ' ' + castillo[1][1] + ' ' + castillo[1][2])
     print('   ' + castillo[2][0] + ' ' + castillo[2][1] + ' ' + castillo[2][2])
@@ -122,6 +156,10 @@ def mapa_castillo():
 
 
 def dragon(encontrar):
+    """
+    La función degon recibe el parametro encontrar, este parametro contiene el valor de la selección del usuario para
+    la selección de la siguiente esena del juego al encontrar al dragon
+    """
     if encontrar == 'encontrar_dragon':
         marco('arriba')
         print("°º¤ø,¸¸,                                   Entras al", escenario[1], " y encuentras al", personaje[2], ""
@@ -159,6 +197,9 @@ def dragon(encontrar):
         marco('fin')
 
 
+"""
+===========================================  parte principal del programa ==============================================
+"""
 print('\nResponde a las preguntas utilizando si o no\n')
 monedas = 100
 respuesta = input('¿Quieres jugar?\n')
