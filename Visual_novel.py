@@ -16,7 +16,7 @@ personaje = ["princesa", "vendedor", "dragón"]
 escenario = ["bosque", "castillo", "palacio"]
 
 """
-=============================================== funciones de preguntas  ================================================
+============================================= funciones de la historia  ================================================
 """
 
 
@@ -236,6 +236,7 @@ while respuesta != 'no':
                 respuesta_amigos = input('¿Quieres ser su amigo?\n')
                 if respuesta_amigos == 'si':
                     dragon('si_amigos')
+                    respuesta = input('¿Volver a intentar?\n')
                 elif respuesta_amigos == 'no':
                     dragon('no_amigos')
                     respuesta = input('¿Volver a intentar?\n')
